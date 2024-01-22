@@ -13,7 +13,8 @@ struct ListRow: View {
     var body: some View {
         VStack {
             
-            Text("Activité uwu")
+            Text(activity.location)
+            Text(activity.start)
         }
         .padding()
     }

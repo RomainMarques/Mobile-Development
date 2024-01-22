@@ -12,7 +12,6 @@ struct ActivityView: View {
     var activity: Activity
     var body: some View {
         VStack {
-            
             Text("Schedule")
         }
         .padding()
@@ -20,6 +19,6 @@ struct ActivityView: View {
 }
 
 #Preview {
-    ContentView()
+    ActivityView(activity: ACTIVITY_TEST[0])
 }
 

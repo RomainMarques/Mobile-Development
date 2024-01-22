@@ -9,18 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel = ViewModel()
+    
     var body: some View {
-        VStack {
-            Text("Schedule")
-            //Text(viewModel.activities[0].id)
-            List(viewModel.activities, id: \.id, rowContent: { activity in
-                Text(activity.id)
-            })
-            
+        NavigationView {
+            List(viewModel.activities, id: \.id) { activity in
+                NavigationLink(destination: ActivityView(activity: activity)) {
+                    ListRow(activity: activity)
+                }
+            }
+            .navigationTitle("Schedule")
         }
-        .padding()
     }
 }
+
 
 #Preview {
     ContentView(viewModel: ViewModel())

@@ -10,8 +10,11 @@ class GetScheduleList {
         self.fetchApi = FetchApi()
     }
     
-    func getSchedule(completion: @escaping [Activity]) {
+    func getSchedule(completion: @escaping ([Activity]?) -> Void) {
+        print("getSchedule method called")
         fetchApi.getScheduleList { scheduleList in
+            print("fetchApi.getScheduleList method called")
+            print("scheduleList: \(scheduleList)")
             if let scheduleList = scheduleList {
                 let listActivity: [Activity] = scheduleList.map { activity in
                     Activity(
@@ -33,4 +36,5 @@ class GetScheduleList {
             }
         }
     }
+
 }

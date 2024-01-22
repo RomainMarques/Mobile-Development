@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State var viewModel: ViewModel = ViewModel()
+    @ObservedObject var viewModel: ViewModel = ViewModel()
     var body: some View {
         VStack {
             Text("Schedule")
-            Text(viewModel.activities[0].id)
+            //Text(viewModel.activities[0].id)
+            List(viewModel.activities, id: \.id, rowContent: { activity in
+                Text(activity.id)
+            })
             
         }
         .padding()

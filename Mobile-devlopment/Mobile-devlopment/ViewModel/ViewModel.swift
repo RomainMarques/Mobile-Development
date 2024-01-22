@@ -7,7 +7,7 @@
 
 import Foundation
 
-let ACTIVITY_TEST = [Activity(id: "a", createdTime: "co", start: "demain", location: "ici", notes: "d", activity: "d", end: "d", type: "String", speakers: nil)]
+let ACTIVITY_TEST = [Activity(id: "a"/*, createdTime: "co", start: "demain", location: "ici", notes: "d", activity: "d", end: "d", type: "String", speakers: nil*/)]
 
 class ViewModel {
     var activities: [Activity] = []

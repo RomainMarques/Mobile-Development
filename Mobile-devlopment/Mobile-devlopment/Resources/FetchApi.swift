@@ -14,7 +14,16 @@ struct Schedule: Codable {
         let end: String
         let type: String
         let speakers: [String]?
+        
+        enum CodingKeys: String, CodingKey {
+            case start = "Start"
+            case location = "Location"
+        }
     }
+}
+
+struct ScheduleListResponse: Codable {
+    let records: [Schedule]
 }
 
 // Protocol for the request factory
@@ -50,6 +59,7 @@ class FetchApi: RequestScheduleProtocol {
                     decoder.dateDecodingStrategy = .iso8601
 
                     let scheduleList = try decoder.decode(ScheduleListResponse.self, from: data)
+                    print(scheduleList)
                     callback(scheduleList.records)
                 } catch {
                     print("JSON decoding error: \(error)")
@@ -61,6 +71,4 @@ class FetchApi: RequestScheduleProtocol {
 }
 
 // Define a struct to represent the entire API response
-struct ScheduleListResponse: Codable {
-    let records: [Schedule]
-}
+

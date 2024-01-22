@@ -7,9 +7,9 @@
 
 import Foundation
 
-class Activity: Decodable {
+struct Activity: Decodable {
     let id: String
-    let createdTime: String
+    /*let createdTime: String
     
     let start: String
     let location: String
@@ -17,17 +17,5 @@ class Activity: Decodable {
     let activity: String
     let end: String
     let type: String
-    let speakers: [String]?
-    
-    init(id: String, createdTime: String, start: String, location: String, notes: String?, activity: String, end: String, type: String, speakers: [String]?) {
-        self.id = id
-        self.createdTime = createdTime
-        self.start = start
-        self.location = location
-        self.notes = notes
-        self.activity = activity
-        self.end = end
-        self.type = type
-        self.speakers = speakers
-    }
+    let speakers: [String]?*/
 }

@@ -7,7 +7,7 @@
 
 import Foundation
 
-let ACTIVITY_TEST = [Activity(id: "a"/*, createdTime: "co", start: "demain", location: "ici", notes: "d", activity: "d", end: "d", type: "String", speakers: nil*/)]
+let ACTIVITY_TEST = [Activity(id: "a", createdTime: "co", start: "demain", location: "ici", notes: "d", activity: "d", end: "d", type: "String", speakers: nil)]
 
 class ViewModel {
     var activities: [Activity] = []
@@ -16,7 +16,16 @@ class ViewModel {
         self.getData()
     }
     
+    private func check(activities : [Activity]?) {
+        if let activities = activities {
+            self.activities = activities
+        } else {
+            print("Error retrieving schedule list")
+        }
+    }
+    
     private func getData() {
-        self.activities = GetScheduleList().getSchedule()
+        let getScheduleList = GetScheduleList()
+        getScheduleList.getSchedule(completion: check)
     }
 }

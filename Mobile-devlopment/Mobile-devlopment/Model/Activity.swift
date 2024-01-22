@@ -9,7 +9,7 @@ import Foundation
 
 struct Activity: Decodable {
     let id: String
-    /*let createdTime: String
+    let createdTime: String
     
     let start: String
     let location: String
@@ -17,5 +17,5 @@ struct Activity: Decodable {
     let activity: String
     let end: String
     let type: String
-    let speakers: [String]?*/
+    let speakers: [String]?
 }

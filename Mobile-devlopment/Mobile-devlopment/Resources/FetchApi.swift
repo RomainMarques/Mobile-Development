@@ -18,6 +18,11 @@ struct Schedule: Codable {
         enum CodingKeys: String, CodingKey {
             case start = "Start"
             case location = "Location"
+            case notes = "Notes"
+            case activity = "Activity"
+            case end = "End"
+            case type = "Type"
+            case speakers = "Speaker(s)"
         }
     }
 }
@@ -43,7 +48,6 @@ class FetchApi: RequestScheduleProtocol {
     func getScheduleList(callback: @escaping ([Schedule]?) -> Void) {
         let urlStr = "https://api.airtable.com/v0/apps3Rtl22fQOI9Ph/%F0%9F%93%86%20Schedule"
         let request = createRequest(urlStr: urlStr)
-        print("request \(request)")
 
         // Use URLSession to perform the request
         URLSession.shared.dataTask(with: request) { data, response, error in
@@ -59,6 +63,7 @@ class FetchApi: RequestScheduleProtocol {
                     decoder.dateDecodingStrategy = .iso8601
 
                     let scheduleList = try decoder.decode(ScheduleListResponse.self, from: data)
+                    print("retour :")
                     print(scheduleList)
                     callback(scheduleList.records)
                 } catch {
@@ -69,6 +74,4 @@ class FetchApi: RequestScheduleProtocol {
         }.resume()
     }
 }
-
-// Define a struct to represent the entire API response
 

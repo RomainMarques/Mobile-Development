@@ -8,15 +8,17 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State var viewModel: ViewModel = ViewModel()
     var body: some View {
         VStack {
             
             Text("Schedule")
+            Text(viewModel.activities[0].id)
         }
         .padding()
     }
 }
 
 #Preview {
-    ContentView()
+    ContentView(viewModel: ViewModel())
 }

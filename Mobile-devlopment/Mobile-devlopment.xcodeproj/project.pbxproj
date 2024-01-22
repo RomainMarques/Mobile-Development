@@ -11,10 +11,12 @@
 		192F65242B5EA1D5004A32C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192F65232B5EA1D5004A32C4 /* Assets.xcassets */; };
 		192F65272B5EA1D5004A32C4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 192F65262B5EA1D5004A32C4 /* Preview Assets.xcassets */; };
 		192F65332B5EA6FA004A32C4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F65322B5EA6FA004A32C4 /* ContentView.swift */; };
-		192F65352B5EA9A9004A32C4 /* URLSession.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F65342B5EA9A9004A32C4 /* URLSession.swift */; };
 		192F65372B5EAD01004A32C4 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F65362B5EAD01004A32C4 /* Activity.swift */; };
 		192F65392B5EAE9C004A32C4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F65382B5EAE9C004A32C4 /* ActivityView.swift */; };
 		192F653B2B5EB219004A32C4 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F653A2B5EB219004A32C4 /* ListRow.swift */; };
+		192F653D2B5EB44E004A32C4 /* GetScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F653C2B5EB44E004A32C4 /* GetScheduleList.swift */; };
+		192F653F2B5EB584004A32C4 /* FetchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F653E2B5EB584004A32C4 /* FetchApi.swift */; };
+		192F65422B5EB974004A32C4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F65412B5EB974004A32C4 /* ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +25,12 @@
 		192F65232B5EA1D5004A32C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		192F65262B5EA1D5004A32C4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		192F65322B5EA6FA004A32C4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		192F65342B5EA9A9004A32C4 /* URLSession.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSession.swift; sourceTree = "<group>"; };
 		192F65362B5EAD01004A32C4 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		192F65382B5EAE9C004A32C4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		192F653A2B5EB219004A32C4 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
+		192F653C2B5EB44E004A32C4 /* GetScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleList.swift; sourceTree = "<group>"; };
+		192F653E2B5EB584004A32C4 /* FetchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchApi.swift; sourceTree = "<group>"; };
+		192F65412B5EB974004A32C4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 		192F651E2B5EA1D4004A32C4 /* Mobile-devlopment */ = {
 			isa = PBXGroup;
 			children = (
+				192F65402B5EB95F004A32C4 /* ViewModel */,
 				192F65312B5EA6D9004A32C4 /* Resources */,
 				192F65302B5EA6D0004A32C4 /* Model */,
 				192F652F2B5EA6A1004A32C4 /* View */,
@@ -98,9 +103,18 @@
 		192F65312B5EA6D9004A32C4 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				192F65342B5EA9A9004A32C4 /* URLSession.swift */,
+				192F653C2B5EB44E004A32C4 /* GetScheduleList.swift */,
+				192F653E2B5EB584004A32C4 /* FetchApi.swift */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		192F65402B5EB95F004A32C4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				192F65412B5EB974004A32C4 /* ViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +190,11 @@
 				192F65202B5EA1D4004A32C4 /* Mobile_devlopmentApp.swift in Sources */,
 				192F65332B5EA6FA004A32C4 /* ContentView.swift in Sources */,
 				192F653B2B5EB219004A32C4 /* ListRow.swift in Sources */,
+				192F653D2B5EB44E004A32C4 /* GetScheduleList.swift in Sources */,
 				192F65372B5EAD01004A32C4 /* Activity.swift in Sources */,
+				192F653F2B5EB584004A32C4 /* FetchApi.swift in Sources */,
+				192F65422B5EB974004A32C4 /* ViewModel.swift in Sources */,
 				192F65392B5EAE9C004A32C4 /* ActivityView.swift in Sources */,
-				192F65352B5EA9A9004A32C4 /* URLSession.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

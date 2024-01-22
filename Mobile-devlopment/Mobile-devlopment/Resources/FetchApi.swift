@@ -18,13 +18,13 @@ struct Schedule: Codable {
 }
 
 // Protocol for the request factory
-protocol RequestFactoryProtocol {
+protocol RequestScheduleProtocol {
     func createRequest(urlStr: String) -> URLRequest
     func getScheduleList(callback: @escaping ([Schedule]?) -> Void)
 }
 
 // Implementation of the request factory
-class RequestFactory: RequestFactoryProtocol {
+class FetchApi: RequestScheduleProtocol {
     func createRequest(urlStr: String) -> URLRequest {
         var request = URLRequest(url: URL(string: urlStr)!)
         request.addValue("Bearer patikQ2NLt8ZuefWF.bab4360644fa68db943fec3ff9db7a0bb990674f092136422b3a0be9212e229d", forHTTPHeaderField: "Authorization")

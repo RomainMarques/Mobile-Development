@@ -16,8 +16,12 @@
 		192F65392B5EAE9C004A32C4 /* ActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F65382B5EAE9C004A32C4 /* ActivityView.swift */; };
 		192F653B2B5EB219004A32C4 /* ListRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F653A2B5EB219004A32C4 /* ListRow.swift */; };
 		192F653D2B5EB44E004A32C4 /* GetScheduleList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F653C2B5EB44E004A32C4 /* GetScheduleList.swift */; };
-		192F653F2B5EB584004A32C4 /* FetchApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F653E2B5EB584004A32C4 /* FetchApi.swift */; };
-		192F65422B5EB974004A32C4 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F65412B5EB974004A32C4 /* ViewModel.swift */; };
+		192F653F2B5EB584004A32C4 /* ScheduleFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F653E2B5EB584004A32C4 /* ScheduleFetch.swift */; };
+		192F65422B5EB974004A32C4 /* ViewModelActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192F65412B5EB974004A32C4 /* ViewModelActivity.swift */; };
+		19B92B652B5FF6FF00DCE4E3 /* SpeakerFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B642B5FF6FF00DCE4E3 /* SpeakerFetch.swift */; };
+		19B92B672B5FF98800DCE4E3 /* GetSpeakerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B662B5FF98800DCE4E3 /* GetSpeakerList.swift */; };
+		19B92B6B2B5FFB8000DCE4E3 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B6A2B5FFB8000DCE4E3 /* Contributor.swift */; };
+		19B92B6D2B5FFCFA00DCE4E3 /* ViewModelContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B6C2B5FFCFA00DCE4E3 /* ViewModelContributor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,8 +35,12 @@
 		192F65382B5EAE9C004A32C4 /* ActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityView.swift; sourceTree = "<group>"; };
 		192F653A2B5EB219004A32C4 /* ListRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRow.swift; sourceTree = "<group>"; };
 		192F653C2B5EB44E004A32C4 /* GetScheduleList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetScheduleList.swift; sourceTree = "<group>"; };
-		192F653E2B5EB584004A32C4 /* FetchApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchApi.swift; sourceTree = "<group>"; };
-		192F65412B5EB974004A32C4 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		192F653E2B5EB584004A32C4 /* ScheduleFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScheduleFetch.swift; sourceTree = "<group>"; };
+		192F65412B5EB974004A32C4 /* ViewModelActivity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelActivity.swift; sourceTree = "<group>"; };
+		19B92B642B5FF6FF00DCE4E3 /* SpeakerFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerFetch.swift; sourceTree = "<group>"; };
+		19B92B662B5FF98800DCE4E3 /* GetSpeakerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpeakerList.swift; sourceTree = "<group>"; };
+		19B92B6A2B5FFB8000DCE4E3 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
+		19B92B6C2B5FFCFA00DCE4E3 /* ViewModelContributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContributor.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +107,7 @@
 			isa = PBXGroup;
 			children = (
 				192F65362B5EAD01004A32C4 /* Activity.swift */,
+				19B92B6A2B5FFB8000DCE4E3 /* Contributor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,7 +116,9 @@
 			isa = PBXGroup;
 			children = (
 				192F653C2B5EB44E004A32C4 /* GetScheduleList.swift */,
-				192F653E2B5EB584004A32C4 /* FetchApi.swift */,
+				192F653E2B5EB584004A32C4 /* ScheduleFetch.swift */,
+				19B92B642B5FF6FF00DCE4E3 /* SpeakerFetch.swift */,
+				19B92B662B5FF98800DCE4E3 /* GetSpeakerList.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -115,7 +126,8 @@
 		192F65402B5EB95F004A32C4 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				192F65412B5EB974004A32C4 /* ViewModel.swift */,
+				192F65412B5EB974004A32C4 /* ViewModelActivity.swift */,
+				19B92B6C2B5FFCFA00DCE4E3 /* ViewModelContributor.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -195,10 +207,14 @@
 				192F65332B5EA6FA004A32C4 /* ContentView.swift in Sources */,
 				192F653B2B5EB219004A32C4 /* ListRow.swift in Sources */,
 				192F653D2B5EB44E004A32C4 /* GetScheduleList.swift in Sources */,
+				19B92B6D2B5FFCFA00DCE4E3 /* ViewModelContributor.swift in Sources */,
 				192F65372B5EAD01004A32C4 /* Activity.swift in Sources */,
-				192F653F2B5EB584004A32C4 /* FetchApi.swift in Sources */,
-				192F65422B5EB974004A32C4 /* ViewModel.swift in Sources */,
+				192F653F2B5EB584004A32C4 /* ScheduleFetch.swift in Sources */,
+				19B92B672B5FF98800DCE4E3 /* GetSpeakerList.swift in Sources */,
+				192F65422B5EB974004A32C4 /* ViewModelActivity.swift in Sources */,
+				19B92B652B5FF6FF00DCE4E3 /* SpeakerFetch.swift in Sources */,
 				192F65392B5EAE9C004A32C4 /* ActivityView.swift in Sources */,
+				19B92B6B2B5FFB8000DCE4E3 /* Contributor.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

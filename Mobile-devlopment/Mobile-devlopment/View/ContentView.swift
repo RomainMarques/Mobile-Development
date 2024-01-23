@@ -12,13 +12,14 @@ let backgroundGradient = LinearGradient(
     startPoint: .top, endPoint: .bottom)
 
 struct ContentView: View {
-    @ObservedObject var viewModel: ViewModel = ViewModel()
+    @ObservedObject var viewModelActivity: ViewModelActivity = ViewModelActivity()
+    @ObservedObject var viewModelContributor: ViewModelContributor = ViewModelContributor()
    
     var body: some View {
         NavigationView {
             List {
                 Section {
-                    ForEach(viewModel.activities, id: \.id) { activity in
+                    ForEach(viewModelActivity.activities, id: \.id) { activity in
                         if activity.start.contains("02-08") {
                             NavigationLink(destination: ActivityView(activity: activity)) {
                                 ListRow(activity: activity)
@@ -29,7 +30,7 @@ struct ContentView: View {
                     Text("Day 1").foregroundStyle(.white).font(.title3)
                 }
                 Section {
-                    ForEach(viewModel.activities, id: \.id) { activity in
+                    ForEach(viewModelActivity.activities, id: \.id) { activity in
                         if activity.start.contains("02-09") {
                             NavigationLink(destination: ActivityView(activity: activity)) {
                                 ListRow(activity: activity)
@@ -51,5 +52,5 @@ struct ContentView: View {
 
 
 #Preview {
-    ContentView(viewModel: ViewModel())
+    ContentView(viewModelActivity: ViewModelActivity(), viewModelContributor: ViewModelContributor())
 }

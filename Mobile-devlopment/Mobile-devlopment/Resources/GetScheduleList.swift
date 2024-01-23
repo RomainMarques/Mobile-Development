@@ -4,17 +4,14 @@ import Foundation
 class GetScheduleList {
     typealias CompletionHandler = ([Activity]?) -> Void
     
-    private let fetchApi: FetchApi
+    private let fetchApi: ScheduleFetch
     
     init() {
-        self.fetchApi = FetchApi()
+        self.fetchApi = ScheduleFetch()
     }
     
     func getSchedule(completion: @escaping ([Activity]?) -> Void) {
-        print("getSchedule method called")
         fetchApi.getScheduleList { scheduleList in
-            print("fetchApi.getScheduleList method called")
-            print("scheduleList: \(scheduleList)")
             if let scheduleList = scheduleList {
                 let listActivity: [Activity] = scheduleList.map { activity in
                     Activity(

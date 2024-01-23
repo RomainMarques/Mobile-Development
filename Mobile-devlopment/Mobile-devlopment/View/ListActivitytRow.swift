@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 // pour afficher un resume de l url sur la home page ou lutilisateur pourra cliquer dessus
-struct ListRow: View {
+struct ListActivitytRow: View {
     let activity: Activity
     var body: some View {
         VStack {

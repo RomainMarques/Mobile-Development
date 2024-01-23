@@ -14,39 +14,31 @@ let backgroundGradient = LinearGradient(
 struct ContentView: View {
     @ObservedObject var viewModelActivity: ViewModelActivity = ViewModelActivity()
     @ObservedObject var viewModelContributor: ViewModelContributor = ViewModelContributor()
+    @State var showSchedule : Bool = true
    
     var body: some View {
-        NavigationView {
-            List {
-                Section {
-                    ForEach(viewModelActivity.activities, id: \.id) { activity in
-                        if activity.start.contains("02-08") {
-                            NavigationLink(destination: ActivityView(activity: activity)) {
-                                ListRow(activity: activity)
-                            }
-                        }
-                    }
-                } header: {
-                    Text("Day 1").foregroundStyle(.white).font(.title3)
+        HStack {
+            Image("schedule-vector")
+                .resizable()
+                .frame(width: 50, height: 50)
+                .padding(40)
+                .onTapGesture {
+                    self.showSchedule = true
                 }
-                Section {
-                    ForEach(viewModelActivity.activities, id: \.id) { activity in
-                        if activity.start.contains("02-09") {
-                            NavigationLink(destination: ActivityView(activity: activity)) {
-                                ListRow(activity: activity)
-                            }
-                        }
-                    }
-                } header: {
-                    Text("Day 2").foregroundStyle(.white).font(.title3)
+            Image("user-icon")
+                .resizable()
+                .frame(width: 50, height: 50)
+                .padding(40)
+                .onTapGesture {
+                    self.showSchedule = false
                 }
-            }
-            .navigationTitle(
-                Text("Schedule")
-            )
-            .background(backgroundGradient)
-            .scrollContentBackground(.hidden)
         }
+        if (showSchedule) {
+            ActivitiesView(activities: viewModelActivity.activities)
+        } else {
+            ContributorsView(contributors: viewModelContributor.contributors)
+        }
+        
     }
 }
 

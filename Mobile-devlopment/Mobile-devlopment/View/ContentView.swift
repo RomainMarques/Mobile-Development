@@ -7,6 +7,10 @@
 
 import SwiftUI
 
+let backgroundGradient = LinearGradient(
+    colors: [Color.cyan, Color.mint],
+    startPoint: .top, endPoint: .bottom)
+
 struct ContentView: View {
     @ObservedObject var viewModel: ViewModel = ViewModel()
     
@@ -17,7 +21,11 @@ struct ContentView: View {
                     ListRow(activity: activity)
                 }
             }
-            .navigationTitle("Schedule")
+            .navigationTitle(
+                Text("Schedule")
+            )
+            .background(backgroundGradient)
+            .scrollContentBackground(.hidden)
         }
     }
 }

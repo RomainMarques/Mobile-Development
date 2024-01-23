@@ -14,7 +14,7 @@ struct ListRow: View {
         VStack {
             
             Text(activity.location)
-            Text(activity.start)
+            Text(activity.formatDate(dateStr: activity.start))
         }
         .padding()
     }

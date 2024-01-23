@@ -17,7 +17,7 @@ struct ListRow: View {
                 .font(.headline)
             Text(activity.formatDate(dateStr: activity.start)).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading).font(.footnote)
         }
-        .padding()
+        .padding(5)
     }
 }
 

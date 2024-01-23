@@ -21,6 +21,7 @@ class GetSpeakerList {
                                 company: contributor.fields.company,
                                 name: contributor.fields.name,
                                 phone: contributor.fields.phone,
+                                speakingAt: contributor.fields.speakingAt,
                                 role: contributor.fields.role)
                 }
                 completion(listContributors)

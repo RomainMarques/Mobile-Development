@@ -15,6 +15,7 @@ struct Contributor: Decodable {
     let company: String
     let name: String
     let phone: String
+    let speakingAt: [String]
     let role: String
         
 }

@@ -12,6 +12,7 @@ struct Speaker: Codable {
         let company: String
         let name: String
         let phone: String
+        let speakingAt: [String]
         let role: String
         
         enum CodingKeys: String, CodingKey {
@@ -21,6 +22,7 @@ struct Speaker: Codable {
             case name = "Name"
             case phone = "Phone"
             case role = "Role"
+            case speakingAt = "Speaking at"
         }
     }
 }

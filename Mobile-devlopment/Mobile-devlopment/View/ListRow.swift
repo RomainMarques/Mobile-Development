@@ -12,11 +12,12 @@ struct ListRow: View {
     let activity: Activity
     var body: some View {
         VStack {
-            
-            Text(activity.location)
-            Text(activity.start)
+            Text(activity.activity)
+                .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
+                .font(.headline)
+            Text(activity.formatDate(dateStr: activity.start)).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading).font(.footnote)
         }
-        .padding()
+        .padding(5)
     }
 }
 

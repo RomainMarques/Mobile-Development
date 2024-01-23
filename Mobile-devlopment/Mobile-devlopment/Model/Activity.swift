@@ -18,4 +18,15 @@ struct Activity: Decodable {
     let end: String
     let type: String
     let speakers: [String]?
+    
+    func formatDate(dateStr : String) -> String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX")
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.sssZ"
+        
+        let date = dateFormatter.date(from: dateStr)!
+        dateFormatter.dateFormat = "MM-dd-yyyy '@' HH:mm:ss"
+        
+        return dateFormatter.string(from: date)
+    }
 }

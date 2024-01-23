@@ -18,7 +18,7 @@ class ViewModel : ObservableObject {
     
     private func check(activities : [Activity]?) {
         if let activities = activities {
-            self.activities = activities
+            self.activities = activities.sorted(by: { $1.start > $0.start })
         } else {
             print("Error retrieving schedule list")
         }

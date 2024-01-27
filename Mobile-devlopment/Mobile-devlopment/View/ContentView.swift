@@ -17,6 +17,11 @@ struct ContentView: View {
     @State var showSchedule : Bool = true
    
     var body: some View {
+        if (showSchedule) {
+            ActivitiesView(activities: viewModelActivity.activities)
+        } else {
+            ContributorsView(contributors: viewModelContributor.contributors)
+        }
         HStack {
             Image("schedule-vector")
                 .resizable()
@@ -33,12 +38,6 @@ struct ContentView: View {
                     self.showSchedule = false
                 }
         }
-        if (showSchedule) {
-            ActivitiesView(activities: viewModelActivity.activities)
-        } else {
-            ContributorsView(contributors: viewModelContributor.contributors)
-        }
-        
     }
 }
 

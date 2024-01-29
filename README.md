@@ -72,6 +72,7 @@ You can find the project's tasks [here](https://github.com/users/RomainMarques/p
 We created a logo for our app and changed its category to "Utility".
 Moreover, we added a security in the branch main of GitHub. It is necessary to be approved by at least one person.
 We declared also our tasks in GitHub Projects tab.
+We also created a tag for our final version of our app.
 
 ### Conclusion
 

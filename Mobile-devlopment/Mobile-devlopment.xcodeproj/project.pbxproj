@@ -27,6 +27,7 @@
 		19B92B672B5FF98800DCE4E3 /* GetSpeakerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B662B5FF98800DCE4E3 /* GetSpeakerList.swift */; };
 		19B92B6B2B5FFB8000DCE4E3 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B6A2B5FFB8000DCE4E3 /* Contributor.swift */; };
 		19B92B6D2B5FFCFA00DCE4E3 /* ViewModelContributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B6C2B5FFCFA00DCE4E3 /* ViewModelContributor.swift */; };
+		F83FE6502B67F291000F1B27 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F83FE64F2B67F291000F1B27 /* InfoView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +52,7 @@
 		19B92B662B5FF98800DCE4E3 /* GetSpeakerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpeakerList.swift; sourceTree = "<group>"; };
 		19B92B6A2B5FFB8000DCE4E3 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		19B92B6C2B5FFCFA00DCE4E3 /* ViewModelContributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelContributor.swift; sourceTree = "<group>"; };
+		F83FE64F2B67F291000F1B27 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				199EBA022B6042B60004B67B /* ListContributorRow.swift */,
 				199EBA042B6044340004B67B /* ContributorsView.swift */,
 				199EBA062B6045FA0004B67B /* ContributorView.swift */,
+				F83FE64F2B67F291000F1B27 /* InfoView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 				192F65332B5EA6FA004A32C4 /* ContentView.swift in Sources */,
 				192F653B2B5EB219004A32C4 /* ListActivitytRow.swift in Sources */,
 				192F653D2B5EB44E004A32C4 /* GetScheduleList.swift in Sources */,
+				F83FE6502B67F291000F1B27 /* InfoView.swift in Sources */,
 				19B92B6D2B5FFCFA00DCE4E3 /* ViewModelContributor.swift in Sources */,
 				199EBA032B6042B60004B67B /* ListContributorRow.swift in Sources */,
 				199EBA072B6045FA0004B67B /* ContributorView.swift in Sources */,

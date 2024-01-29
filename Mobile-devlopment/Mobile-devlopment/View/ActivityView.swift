@@ -12,35 +12,25 @@ struct ActivityView: View {
     var activity: Activity
     let helper : Helper = Helper()
     var body: some View {
-        Text("Schedule of the event")
-        VStack(alignment: .leading) {
-            HStack {
-                Text("Name of the activity : ")
-                Text(activity.activity).foregroundStyle(.blue)
-                    .bold()
+        VStack {
+            Text("Schedule of the event")
+                .font(.title)
+                .bold()
+            
+            VStack(alignment: .leading) {
+                InfoView(title: "Name of the activity", value: activity.activity)
+                InfoView(title: "Location", value: activity.location)
+                InfoView(title: "Day of the activity", value: activity.formatDays(dateStr: activity.start)!)
+                InfoView(title: "Start of the activity", value: activity.formatHoursAndMinutes(dateStr: activity.start)!)
+                InfoView(title: "End of the activity", value: activity.formatHoursAndMinutes(dateStr: activity.end)!)
             }
-            HStack {
-                Text("Location : ")
-                Text(activity.location).foregroundStyle(.blue)
-                    .bold()
-            }
-            HStack {
-                Text("Day of the activity : ")
-                Text(helper.formatDays(dateStr: activity.start)!).foregroundStyle(.blue)
-                    .bold()
-            }
-            HStack {
-                Text("Start of the activity : ")
-                Text(helper.formatHoursAndMinutes(dateStr: activity.start)!).foregroundStyle(.blue)
-                    .bold()
-            }
-            HStack {
-                Text("End of the activity : ")
-                Text(helper.formatHoursAndMinutes(dateStr: activity.end)!).foregroundStyle(.blue)
-                    .bold()
-            }
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
+            
+            Divider()
+            Spacer()
         }
-        .padding()
+        .background(backgroundGradient)
     }
 }
 

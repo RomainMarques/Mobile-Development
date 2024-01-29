@@ -10,42 +10,29 @@ import SwiftUI
 
 struct ContributorView: View {
     var contributor: Contributor
+    
     var body: some View {
         VStack {
             Image("user-icon")
                 .resizable()
                 .frame(width: 50, height: 50)
-                .padding(40)
+                .clipShape(Circle())
+            
             VStack(alignment: .leading) {
-                HStack {
-                    Text("Name:")
-                    Text(contributor.name).foregroundStyle(.blue)
-                        .bold()
-                }
-                HStack {
-                    Text("Role:")
-                    Text(contributor.role).foregroundStyle(.blue).bold()
-                }
-                HStack {
-                    Text("Email:")
-                    Text(contributor.email).foregroundStyle(.blue)
-                        .bold()
-                }
-                HStack {
-                    Text("Phone:")
-                    Text(contributor.phone).foregroundStyle(.blue).bold()
-                }
-                HStack {
-                    Text("Company:")
-                    Text(contributor.company).foregroundStyle(.blue).bold()
-                }
-                HStack {
-                    Text("The user is confirmed:")
-                    Text(String(contributor.confirmed!)).foregroundStyle(.blue).bold()
-                }
+                InfoView(title: "Name", value: contributor.name)
+                InfoView(title: "Role", value: contributor.role)
+                InfoView(title: "Email", value: contributor.email)
+                InfoView(title: "Phone", value: contributor.phone)
+                InfoView(title: "Company", value: contributor.company)
+                InfoView(title: "The user is confirmed", value: String(contributor.confirmed!))
             }
+            .padding()
+            .background(RoundedRectangle(cornerRadius: 10).fill(Color.white))
+            
+            Divider()
             Spacer()
         }
+        .background(backgroundGradient)
     }
 }
 

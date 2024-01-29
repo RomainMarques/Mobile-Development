@@ -13,10 +13,8 @@ To run the application, you need to have the following installed on your machine
 * [Xcode](https://developer.apple.com/xcode/) (for iOS)
 
 ### Installing
-To install the application, you need to clone the [repository](https://github.com/RomainMarques/Mobile-Development) on your machine. Once done, you need to ...
+To install the application, you need to clone the [repository](https://github.com/RomainMarques/Mobile-Development) on your machine.
 
-
-And now you have the application running on your machine.
 
 ### Running the tests
 *Tests are not implemented yet*
@@ -40,36 +38,44 @@ In this context:
 The entry point is the `Mobile_devlopmentApp.swift` file, responsible for creating the initial view `ContentView.swift` of the application. Here is a tree representation of the project:
 
 ```
-Mobile_devlopmentApp
-└── ContentView
-    ├── ActivitiesView
-    │   └── ActivityView (use ListActivityRow)
-    └── ContributorsView
-        └── ContributorView (use ListContributorRow)
+├── Mobile_devlopmentApp.swift
+├── Model
+│   ├── Activity.swift
+│   └── Contributor.swift
+├── Preview Content
+│   └── Preview Assets.xcassets
+│       └── Contents.json
+├── Resources
+│   ├── GetScheduleList.swift
+│   ├── GetSpeakerList.swift
+│   ├── ScheduleFetch.swift
+│   └── SpeakerFetch.swift
+├── View
+│   ├── ActivitiesView.swift
+│   ├── ActivityView.swift
+│   ├── ContentView.swift
+│   ├── ContributorView.swift
+│   ├── ContributorsView.swift
+│   ├── ListActivitytRow.swift
+│   └── ListContributorRow.swift
+└── ViewModel
+    ├── ViewModelActivity.swift
+    └── ViewModelContributor.swift
 ```
+
+We declared all the tasks to do in GitHub Projects tab.
 
 You can find the project's tasks [here](https://github.com/users/RomainMarques/projects/2/views/1).
 
-#### Features
+### Bonus Parts
 
-The application has the following features:
-* **Schedule**: The schedule is the main feature of the application. It allows the user to see the talks and activities that are planned for the conference. The schedule is displayed in a table view and the user can select a talk to see more details about it. The schedule is also displayed in a calendar view, which allows the user to see the talks and activities that are planned for a specific day.
-* ...
-
-#### Limitations
-
-The application has the following limitations:
-...
-
-#### Future work
-
-We have identified the following improvements that could be made to the application:
-...
+We created a logo for our app and changed its category to "Utility".
+Moreover, we added a security in the branch main of GitHub. It is necessary to be approved by at least one person.
+We declared also our tasks in GitHub Projects tab.
 
 ### Conclusion
 
 This project was a great opportunity to learn more about mobile development and the Swift programming language. We have learned a lot about the MVVM architecture and how to use it to develop an iOS application. We have also learned how to use the SwiftUI framework to create the user interface of the application.
-We progressed ...
 
 ## Authors
 * **[Romain Marques](https://github.com/RomainMarques)** 

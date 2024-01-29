@@ -22,6 +22,7 @@
 		199EBA032B6042B60004B67B /* ListContributorRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBA022B6042B60004B67B /* ListContributorRow.swift */; };
 		199EBA052B6044340004B67B /* ContributorsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBA042B6044340004B67B /* ContributorsView.swift */; };
 		199EBA072B6045FA0004B67B /* ContributorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 199EBA062B6045FA0004B67B /* ContributorView.swift */; };
+		19B169BB2B68081400FCABAD /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B169BA2B68081400FCABAD /* Helper.swift */; };
 		19B92B652B5FF6FF00DCE4E3 /* SpeakerFetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B642B5FF6FF00DCE4E3 /* SpeakerFetch.swift */; };
 		19B92B672B5FF98800DCE4E3 /* GetSpeakerList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B662B5FF98800DCE4E3 /* GetSpeakerList.swift */; };
 		19B92B6B2B5FFB8000DCE4E3 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B92B6A2B5FFB8000DCE4E3 /* Contributor.swift */; };
@@ -45,6 +46,7 @@
 		199EBA022B6042B60004B67B /* ListContributorRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListContributorRow.swift; sourceTree = "<group>"; };
 		199EBA042B6044340004B67B /* ContributorsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorsView.swift; sourceTree = "<group>"; };
 		199EBA062B6045FA0004B67B /* ContributorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContributorView.swift; sourceTree = "<group>"; };
+		19B169BA2B68081400FCABAD /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		19B92B642B5FF6FF00DCE4E3 /* SpeakerFetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerFetch.swift; sourceTree = "<group>"; };
 		19B92B662B5FF98800DCE4E3 /* GetSpeakerList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetSpeakerList.swift; sourceTree = "<group>"; };
 		19B92B6A2B5FFB8000DCE4E3 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
@@ -120,6 +122,7 @@
 			children = (
 				192F65362B5EAD01004A32C4 /* Activity.swift */,
 				19B92B6A2B5FFB8000DCE4E3 /* Contributor.swift */,
+				19B169BA2B68081400FCABAD /* Helper.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 				199EBA032B6042B60004B67B /* ListContributorRow.swift in Sources */,
 				199EBA072B6045FA0004B67B /* ContributorView.swift in Sources */,
 				192F65372B5EAD01004A32C4 /* Activity.swift in Sources */,
+				19B169BB2B68081400FCABAD /* Helper.swift in Sources */,
 				199EB9FD2B6041AE0004B67B /* ActivitiesView.swift in Sources */,
 				192F653F2B5EB584004A32C4 /* ScheduleFetch.swift in Sources */,
 				199EBA052B6044340004B67B /* ContributorsView.swift in Sources */,

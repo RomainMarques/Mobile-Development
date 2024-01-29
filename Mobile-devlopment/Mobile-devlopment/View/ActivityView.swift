@@ -10,6 +10,7 @@ import SwiftUI
 // pour afficher le detail de lactivite
 struct ActivityView: View {
     var activity: Activity
+    let helper : Helper = Helper()
     var body: some View {
         Text("Schedule of the event")
         VStack(alignment: .leading) {
@@ -25,17 +26,17 @@ struct ActivityView: View {
             }
             HStack {
                 Text("Day of the activity : ")
-                Text(activity.formatDays(dateStr: activity.start)!).foregroundStyle(.blue)
+                Text(helper.formatDays(dateStr: activity.start)!).foregroundStyle(.blue)
                     .bold()
             }
             HStack {
                 Text("Start of the activity : ")
-                Text(activity.formatHoursAndMinutes(dateStr: activity.start)!).foregroundStyle(.blue)
+                Text(helper.formatHoursAndMinutes(dateStr: activity.start)!).foregroundStyle(.blue)
                     .bold()
             }
             HStack {
                 Text("End of the activity : ")
-                Text(activity.formatHoursAndMinutes(dateStr: activity.end)!).foregroundStyle(.blue)
+                Text(helper.formatHoursAndMinutes(dateStr: activity.end)!).foregroundStyle(.blue)
                     .bold()
             }
         }

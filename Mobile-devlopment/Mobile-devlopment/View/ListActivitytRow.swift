@@ -10,12 +10,13 @@ import SwiftUI
 // pour afficher un resume de l url sur la home page ou lutilisateur pourra cliquer dessus
 struct ListActivitytRow: View {
     let activity: Activity
+    let helper: Helper = Helper()
     var body: some View {
         VStack {
             Text(activity.activity)
                 .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading)
                 .font(.headline)
-            Text(activity.formatDate(dateStr: activity.start)).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading).font(.footnote)
+            Text(helper.formatDate(dateStr: activity.start)).frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .leading).font(.footnote)
         }
         .padding(5)
     }

@@ -8,14 +8,18 @@
 import Foundation
 import SwiftUI
 
+let dateDay2 = "2024-02-09T00:00:00.000Z"
+
 struct ActivitiesView: View {
     let activities: [Activity]
+    let helper: Helper = Helper()
     var body: some View {
         NavigationView {
             List {
                 Section {
                     ForEach(activities, id: \.id) { activity in
-                        if activity.start.contains("02-08") {
+                        if 
+                            helper.isFirstDateStringBeforeSecond(firstDateString: activity.start, secondDateString: dateDay2) {
                             NavigationLink(destination: ActivityView(activity: activity)) {
                                 ListActivitytRow(activity: activity)
                             }
@@ -26,7 +30,7 @@ struct ActivitiesView: View {
                 }
                 Section {
                     ForEach(activities, id: \.id) { activity in
-                        if activity.start.contains("02-09") {
+                        if !helper.isFirstDateStringBeforeSecond(firstDateString: activity.start, secondDateString: dateDay2) {
                             NavigationLink(destination: ActivityView(activity: activity)) {
                                 ListActivitytRow(activity: activity)
                             }

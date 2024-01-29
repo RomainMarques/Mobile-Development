@@ -50,5 +50,5 @@ struct ActivitiesView: View {
 }
 
 #Preview {
-    ActivitiesView(activities: ACTIVITY_TEST)
+    ContentView(viewModelActivity: ViewModelActivity(), viewModelContributor: ViewModelContributor())
 }

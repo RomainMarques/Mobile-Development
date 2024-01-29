@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct ListActivitytRow: View {
+struct ListActivityRow: View {
     let activity: Activity
     let helper: Helper = Helper()
     var body: some View {

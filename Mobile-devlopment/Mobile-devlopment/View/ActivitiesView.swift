@@ -21,7 +21,7 @@ struct ActivitiesView: View {
                         if 
                             helper.isFirstDateStringBeforeSecond(firstDateString: activity.start, secondDateString: dateDay2) {
                             NavigationLink(destination: ActivityView(activity: activity)) {
-                                ListActivitytRow(activity: activity)
+                                ListActivityRow(activity: activity)
                             }
                         }
                     }
@@ -32,7 +32,7 @@ struct ActivitiesView: View {
                     ForEach(activities, id: \.id) { activity in
                         if !helper.isFirstDateStringBeforeSecond(firstDateString: activity.start, secondDateString: dateDay2) {
                             NavigationLink(destination: ActivityView(activity: activity)) {
-                                ListActivitytRow(activity: activity)
+                                ListActivityRow(activity: activity)
                             }
                         }
                     }

@@ -2,7 +2,7 @@
 //  InfoView.swift
 //  Mobile-devlopment
 //
-//  Created by goldorak on 29/01/2024.
+//  Created by Vincent Marguet on 29/01/2024.
 //
 
 import SwiftUI

@@ -7,7 +7,7 @@
 
 import Foundation
 import SwiftUI
-// pour afficher un resume de l url sur la home page ou lutilisateur pourra cliquer dessus
+
 struct ListActivitytRow: View {
     let activity: Activity
     let helper: Helper = Helper()

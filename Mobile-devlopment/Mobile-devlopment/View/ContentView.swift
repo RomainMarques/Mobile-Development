@@ -18,11 +18,7 @@ struct ContentView: View {
    
     var body: some View {
         if (showSchedule) {
-            NavigationView {
-                ActivitiesView(activities: viewModelActivity.activities)
-                    .navigationBarHidden(true)
-            }
-            .accentColor(Color.white)
+            ActivitiesView(activities: viewModelActivity.activities)
         } else {
             ContributorsView(contributors: viewModelContributor.contributors)
         }

@@ -9,7 +9,7 @@ import Foundation
 
 let ACTIVITY_TEST = [Activity(id: "a", createdTime: "co", start: "demain", location: "ici", notes: "d", activity: "d", end: "d", type: "String", speakers: nil)]
 
-class ViewModel : ObservableObject {
+class ViewModelActivity : ObservableObject {
     @Published var activities: [Activity] = []
     
     init() {
@@ -18,7 +18,7 @@ class ViewModel : ObservableObject {
     
     private func check(activities : [Activity]?) {
         if let activities = activities {
-            self.activities = activities
+            self.activities = activities.sorted(by: { $1.start > $0.start })
         } else {
             print("Error retrieving schedule list")
         }

@@ -1,52 +1,52 @@
 import Foundation
 
-// Define the model Schedule
-struct Schedule: Codable {
+// Define the model Speaker
+struct Speaker: Codable {
     let id: String
     let createdTime: String
-    let fields: ScheduleFields
+    let fields: SpeakerFields
     
-    struct ScheduleFields: Codable {
-        let start: String
-        let location: String
-        let notes: String?
-        let activity: String
-        let end: String
-        let type: String
-        let speakers: [String]?
+    struct SpeakerFields: Codable {
+        let email: String
+        let confirmed: Bool?
+        let company: String
+        let name: String
+        let phone: String
+        let speakingAt: [String]
+        let role: String
         
         enum CodingKeys: String, CodingKey {
-            case start = "Start"
-            case location = "Location"
-            case notes = "Notes"
-            case activity = "Activity"
-            case end = "End"
-            case type = "Type"
-            case speakers = "Speaker(s)"
+            case email = "Email"
+            case confirmed = "Confirmed?"
+            case company = "Company"
+            case name = "Name"
+            case phone = "Phone"
+            case role = "Role"
+            case speakingAt = "Speaking at"
         }
     }
 }
 
-struct ScheduleListResponse: Codable {
-    let records: [Schedule]
+struct SpeakerListResponse: Codable {
+    let records: [Speaker]
 }
 
 // Protocol for the request factory
-protocol RequestScheduleProtocol {
+protocol RequestSpeakerProtocol {
     func createRequest(urlStr: String) -> URLRequest
-    func getScheduleList(callback: @escaping ([Schedule]?) -> Void)
+    func getSpeakerList(callback: @escaping ([Speaker]?) -> Void)
 }
 
 // Implementation of the request factory
-class FetchApi: RequestScheduleProtocol {
+class SpeakerFetch: RequestSpeakerProtocol {
     func createRequest(urlStr: String) -> URLRequest {
         var request = URLRequest(url: URL(string: urlStr)!)
         request.addValue("Bearer patikQ2NLt8ZuefWF.bab4360644fa68db943fec3ff9db7a0bb990674f092136422b3a0be9212e229d", forHTTPHeaderField: "Authorization")
         return request
     }
 
-    func getScheduleList(callback: @escaping ([Schedule]?) -> Void) {
-        let urlStr = "https://api.airtable.com/v0/apps3Rtl22fQOI9Ph/%F0%9F%93%86%20Schedule"
+    func getSpeakerList(callback: @escaping ([Speaker]?) -> Void) {
+        let urlStr = "https://api.airtable.com/v0/apps3Rtl22fQOI9Ph/%F0%9F%8E%A4%20Speakers?maxRecords=3&view=All%20speakers"
         let request = createRequest(urlStr: urlStr)
 
         // Use URLSession to perform the request
@@ -62,10 +62,8 @@ class FetchApi: RequestScheduleProtocol {
                     let decoder = JSONDecoder()
                     decoder.dateDecodingStrategy = .iso8601
 
-                    let scheduleList = try decoder.decode(ScheduleListResponse.self, from: data)
-                    print("retour :")
-                    print(scheduleList)
-                    callback(scheduleList.records)
+                    let speakerList = try decoder.decode(SpeakerListResponse.self, from: data)
+                    callback(speakerList.records)
                 } catch {
                     print("JSON decoding error: \(error)")
                     callback(nil)

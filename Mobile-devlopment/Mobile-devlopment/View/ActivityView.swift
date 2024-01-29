@@ -11,14 +11,39 @@ import SwiftUI
 struct ActivityView: View {
     var activity: Activity
     var body: some View {
-        VStack {
-            Text("Schedule")
+        Text("Schedule of the event")
+        VStack(alignment: .leading) {
+            HStack {
+                Text("Name of the activity : ")
+                Text(activity.activity).foregroundStyle(.blue)
+                    .bold()
+            }
+            HStack {
+                Text("Location : ")
+                Text(activity.location).foregroundStyle(.blue)
+                    .bold()
+            }
+            HStack {
+                Text("Day of the activity : ")
+                Text(activity.formatDays(dateStr: activity.start)!).foregroundStyle(.blue)
+                    .bold()
+            }
+            HStack {
+                Text("Start of the activity : ")
+                Text(activity.formatHoursAndMinutes(dateStr: activity.start)!).foregroundStyle(.blue)
+                    .bold()
+            }
+            HStack {
+                Text("End of the activity : ")
+                Text(activity.formatHoursAndMinutes(dateStr: activity.end)!).foregroundStyle(.blue)
+                    .bold()
+            }
         }
         .padding()
     }
 }
 
 #Preview {
-    ActivityView(activity: ACTIVITY_TEST[0])
+    ContentView(viewModelActivity: ViewModelActivity(), viewModelContributor: ViewModelContributor())
 }
 

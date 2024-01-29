@@ -7,22 +7,40 @@
 
 import SwiftUI
 
+let backgroundGradient = LinearGradient(
+    colors: [Color.mint, Color.cyan],
+    startPoint: .top, endPoint: .bottom)
+
 struct ContentView: View {
-    @ObservedObject var viewModel: ViewModel = ViewModel()
-    
+    @ObservedObject var viewModelActivity: ViewModelActivity = ViewModelActivity()
+    @ObservedObject var viewModelContributor: ViewModelContributor = ViewModelContributor()
+    @State var showSchedule : Bool = true
+   
     var body: some View {
-        NavigationView {
-            List(viewModel.activities, id: \.id) { activity in
-                NavigationLink(destination: ActivityView(activity: activity)) {
-                    ListRow(activity: activity)
+        if (showSchedule) {
+            ActivitiesView(activities: viewModelActivity.activities)
+        } else {
+            ContributorsView(contributors: viewModelContributor.contributors)
+        }
+        HStack {
+            Image("schedule-vector")
+                .resizable()
+                .frame(width: 50, height: 50)
+                .onTapGesture {
+                    self.showSchedule = true
                 }
-            }
-            .navigationTitle("Schedule")
+            Image("user-icon")
+                .resizable()
+                .frame(width: 50, height: 50)
+                .padding(10)
+                .onTapGesture {
+                    self.showSchedule = false
+                }
         }
     }
 }
 
 
 #Preview {
-    ContentView(viewModel: ViewModel())
+    ContentView(viewModelActivity: ViewModelActivity(), viewModelContributor: ViewModelContributor())
 }

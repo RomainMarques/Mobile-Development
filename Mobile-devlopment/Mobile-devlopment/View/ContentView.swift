@@ -26,14 +26,13 @@ struct ContentView: View {
             Image("schedule-vector")
                 .resizable()
                 .frame(width: 50, height: 50)
-                .padding(40)
                 .onTapGesture {
                     self.showSchedule = true
                 }
             Image("user-icon")
                 .resizable()
                 .frame(width: 50, height: 50)
-                .padding(40)
+                .padding(10)
                 .onTapGesture {
                     self.showSchedule = false
                 }
